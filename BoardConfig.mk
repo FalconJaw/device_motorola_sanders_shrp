@@ -22,7 +22,7 @@ DEVICE_PATH := device/motorola/sanders
 ALLOW_MISSING_DEPENDENCIES := true
 
 # Architecture
-TARGET_BOARD_SUFFIX := _64
+#TARGET_BOARD_SUFFIX := _64
 
 # Architecture
 TARGET_ARCH := arm64
@@ -69,7 +69,8 @@ BOARD_KERNEL_SEPARATED_DT := true
 #TARGET_CUSTOM_DTBTOOL := dtbTool_custom
 BOARD_DTBTOOL_ARGS := --force-v3
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
-#TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
+TARGET_PREBUILT_DT := $(DEVICE_PATH)/prebuilt/dt.img
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CONFIG := sanders_defconfig
